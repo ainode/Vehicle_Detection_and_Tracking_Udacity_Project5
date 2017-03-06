@@ -7,13 +7,13 @@ The code for this step is contained in the first code cell of the IPython notebo
 
 I started by reading in all the vehicle and non-vehicle images. Here is an example of one of each of the vehicle and non-vehicle classes:
 
-<table><tr><td>car</td><td>Not-car</td></tr><tr><td><img src="output_images/image0000.png"></td><td><img src="../ztemp/temp/image6.png"></td><td></table>
+<table><tr><td>car</td><td>Not-car</td></tr><tr><td><img src="output_images/image0000.png"></td><td><img src="output_images/image6.png"></td><td></table>
 
 I then explored different color spaces and different skimage.hog() parameters (orientations, pixels_per_cell, and cells_per_block). I grabbed random images from each of the two classes and displayed them to get a feel for what the skimage.hog() output looks like.
 
 Here is an example using the YCrCb color space and HOG parameters of orientations=8, pixels_per_cell=(8, 8) and cells_per_block=(2, 2):
 
-<table><tr><td>ch1 car</td><td>ch2 car</td><td>ch3 car</td><td>ch1 HOG car</td><td>ch2 HOG car</td><td>ch3 HOG car</td></tr><tr><td><img src="../ztemp/temp/ch1 car.png"></td><td><img src="../ztemp/temp/ch2 car.png"></td><td><img src="../ztemp/temp/ch3 car.png"></td><td><img src="../ztemp/temp/ch1 HOG car.png"></td><td><img src="../ztemp/temp/ch2 HOG car.png"></td><td><img src="../ztemp/temp/ch3 HOG car.png"></td><tr><td>ch1 not car</td><td>ch2 not car</td><td>ch3 not car</td><td>ch1 HOG not car</td><td>ch2 HOG not car</td><td>ch3 HOG car</td></tr><tr><td><img src="../ztemp/temp/ch1 Not car.png"></td><td><img src="../ztemp/temp/ch2 Not car.png"></td><td><img src="../ztemp/temp/ch3 Not car.png"></td><td><img src="../ztemp/temp/ch1 HOG Not car.png"></td><td><img src="../ztemp/temp/ch2 HOG Not car.png"></td><td><img src="../ztemp/temp/ch3 HOG Not car.png"></td></table>
+<table><tr><td>ch1 car</td><td>ch2 car</td><td>ch3 car</td><td>ch1 HOG car</td><td>ch2 HOG car</td><td>ch3 HOG car</td></tr><tr><td><img src="output_images/ch1 car.png"></td><td><img src="output_images/ch2 car.png"></td><td><img src="output_images/ch3 car.png"></td><td><img src="output_images/ch1 HOG car.png"></td><td><img src="output_images/ch2 HOG car.png"></td><td><img src="output_images/ch3 HOG car.png"></td><tr><td>ch1 not car</td><td>ch2 not car</td><td>ch3 not car</td><td>ch1 HOG not car</td><td>ch2 HOG not car</td><td>ch3 HOG car</td></tr><tr><td><img src="output_images/ch1 Not car.png"></td><td><img src="output_images/ch2 Not car.png"></td><td><img src="output_images/ch3 Not car.png"></td><td><img src="output_images/ch1 HOG Not car.png"></td><td><img src="output_images/ch2 HOG Not car.png"></td><td><img src="output_images/ch3 HOG Not car.png"></td></table>
 
 ### 2. Explain how you settled on your final choice of HOG parameters.
 
@@ -47,7 +47,7 @@ In the seventh cell of find_car.ipynb, under find_car function slinding window i
 
 Ultimately I searched on one scale(scale of 1.5 provides sufficient detection for cars that are not too far and within reasonable range) using YCrCb 3-channel HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result. Here are some example images:
 
-<table><tr><td>car</td><td>Not-car</td></tr><tr><td><img src="../ztemp/temp/example1.jpg"></td><td><img src="../ztemp/temp/example2.jpg"></td><tr><td><img src="../ztemp/temp/example3.jpg"></td><td></table>
+<table><tr><td>car</td><td>Not-car</td></tr><tr><td><img src="output_images/example1.jpg"></td><td><img src="output_images/example2.jpg"></td><tr><td><img src="output_images/example3.jpg"></td><td></table>
 
 ## Video Implementation
 
@@ -63,15 +63,15 @@ Here's an example result showing the heatmap from a series of frames of video, t
 
 Here are seven frames and their corresponding heatmaps:
 
-<table><tr><td>car</td><td>Not-car</td></tr><tr><td><img src="../ztemp/temp/boxed_frame0.jpg"></td><td><img src="../ztemp/temp/heatmap0.jpg"></td><td><tr><td>car</td><td>Not-car</td></tr><tr><td><img src="../ztemp/temp/boxed_frame1.jpg"></td><td><img src="../ztemp/temp/heatmap1.jpg"></td><td><tr><td>car</td><td>Not-car</td></tr><tr><td><img src="../ztemp/temp/boxed_frame2.jpg"></td><td><img src="../ztemp/temp/heatmap2.jpg"></td><td><tr><td>car</td><td>Not-car</td></tr><tr><td><img src="../ztemp/temp/boxed_frame3.jpg"></td><td><img src="../ztemp/temp/heatmap3.jpg"></td><td><tr><td>car</td><td>Not-car</td></tr><tr><td><img src="../ztemp/temp/boxed_frame4.jpg"></td><td><img src="../ztemp/temp/heatmap4.jpg"></td><td><tr><td>car</td><td>Not-car</td></tr><tr><td><img src="../ztemp/temp/boxed_frame5.jpg"></td><td><img src="../ztemp/temp/heatmap5.jpg"></td><td><tr><td><img src="../ztemp/temp/boxed_frame6.jpg"></td><td><img src="../ztemp/temp/heatmap6.jpg"></td><td></table>
+<table><tr><td>car</td><td>Not-car</td></tr><tr><td><img src="output_images/boxed_frame0.jpg"></td><td><img src="output_images/heatmap0.jpg"></td><td><tr><td>car</td><td>Not-car</td></tr><tr><td><img src="output_images/boxed_frame1.jpg"></td><td><img src="output_images/heatmap1.jpg"></td><td><tr><td>car</td><td>Not-car</td></tr><tr><td><img src="output_images/boxed_frame2.jpg"></td><td><img src="output_images/heatmap2.jpg"></td><td><tr><td>car</td><td>Not-car</td></tr><tr><td><img src="output_images/boxed_frame3.jpg"></td><td><img src="output_images/heatmap3.jpg"></td><td><tr><td>car</td><td>Not-car</td></tr><tr><td><img src="output_images/boxed_frame4.jpg"></td><td><img src="output_images/heatmap4.jpg"></td><td><tr><td>car</td><td>Not-car</td></tr><tr><td><img src="output_images/boxed_frame5.jpg"></td><td><img src="output_images/heatmap5.jpg"></td><td><tr><td><img src="output_images/boxed_frame6.jpg"></td><td><img src="output_images/heatmap6.jpg"></td><td></table>
 
 ### Here is the output of scipy.ndimage.measurements.label() on the integrated heatmap from all six frames:
 
-<img src="../ztemp/temp/label_img.jpg">
+<img src="output_images/label_img.jpg">
 
 ## Here the resulting bounding boxes are drawn onto the last frame in the series:
 
-<img src="../ztemp/temp/draw_img.jpg">
+<img src="output_images/draw_img.jpg">
 
 ## Discussion
 
