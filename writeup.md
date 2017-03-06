@@ -53,7 +53,7 @@ Ultimately I searched on one scale(scale of 1.5 provides sufficient detection fo
 
 ## 1. Provide a link to your final video output. Your pipeline should perform reasonably well on the entire project video (somewhat wobbly or unstable bounding boxes are ok as long as you are identifying the vehicles most of the time with minimal false positives.)
 
-here is a link to my video: 'https://github.com/ainode/Vehicle_Detection_and_Tracking_Project5/main_files/processed.mp4'
+here is a link to my video: 'https://github.com/ainode/Vehicle_Detection_and_Tracking_Project5/processed.mp4'
 
 ## 2. Describe how (and identify where in your code) you implemented some kind of filter for false positives and some method for combining overlapping bounding boxes.
 
